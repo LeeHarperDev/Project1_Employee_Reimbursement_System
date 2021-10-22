@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>All Reimbursement Tickets | Employee Reimbursement Application</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/js/viewAllTickets.js" type="module" defer></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/dashboard">Dashboard</a>
+                </li>
+                <li>
+                    <a href="/admin/employees/add">Register Employee</a>
+                </li>
+                <li>
+                    <a href="/admin/employees">Employees</a>
+                </li>
+                <li>
+                    <a href="/admin/tickets">Tickets</a>
+                </li>
+                <li>
+                    <a href="/api/logout">Logout</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h1>All Submitted Reimbursement Tickets</h1>
+            <hr>
+            <label for="searchByDetermination">
+                Ticket Filter:
+                <select id="searchByDetermination" name="searchByDetermination">
+
+                </select>
+            </label>
+            <div id="ticketList">
+                <span>
+                    Loading...
+                </span>
+            </div>
+        </main>
+        <div id="modal">
+            <div id="modalContent">
+                <button id="closeModalButton">X</button>
+                <h2>Make Ticket Determination</h2>
+                <form id="determinationForm">
+                    <label for="ticket_id">
+                        Ticket ID:
+                        <input type="number" name="ticket_id" id="ticket_id" value="0">
+                    </label>
+                    <label for="determination_type">
+                        Determination:
+                        <select name="determination_type" id="determination_type">
+                        </select>
+                    </label>
+                    <label for="reimbursement_amount">
+                        Reimbursement Amount:
+                        <input type="number" step="0.01" name="reimbursement_amount" id="reimbursement_amount">
+                    </label>
+                    <button type="submit">Submit Determination</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

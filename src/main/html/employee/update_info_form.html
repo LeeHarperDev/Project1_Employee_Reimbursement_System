@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <title>Edit Employee Profile | Employee Reimbursement Application</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/updateEmployeeInfo.js" type="module" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/dashboard">Dashboard</a>
+            </li>
+            <li>
+                <a href="/tickets">Tickets</a>
+            </li>
+            <li>
+                <a href="/profile">Profile</a>
+            </li>
+            <li>
+                <a href="/api/logout">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div id="employeeInfoBox">
+            <div>
+                <img src="/images/employees/employee_placeholder.png">
+                <h2 id="employeeFullName"></h2>
+            </div>
+            <form id="updateInfoForm">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="employeeFirstName">
+                    First Name:
+                        <input type="text" name="employeeFirstName" id="employeeFirstName">
+                    </label>
+                    <label for="employeeLastName">
+                        Last Name:
+                        <input type="text" name="employeeLastName" id="employeeLastName">
+                    </label>
+                    <label for="employeeGender">
+                        Gender:
+                        <input type="text" name="employeeGender" id="employeeGender">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Address Information</legend>
+                    <label for="employeeAddressFirstLine">
+                        Address Line 1:
+                        <input type="text" name="employeeAddressFirstLine" id="employeeAddressFirstLine">
+                    </label>
+                    <label for="employeeAddressSecondLine">
+                        Address Line 2:
+                        <input type="text" name="employeeAddressSecondLine" id="employeeAddressSecondLine">
+                    </label>
+                    <label for="employeeAddressCity">
+                        City:
+                        <input type="text" name="employeeAddressCity" id="employeeAddressCity">
+                    </label>
+                    <label for="employeeAddressState">
+                        State:
+                        <input type="text" name="employeeAddressState" id="employeeAddressState">
+                    </label>
+                    <label for="employeeAddressZip">
+                        ZIP:
+                        <input type="text" name="employeeAddressZip" id="employeeAddressZip">
+                    </label>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

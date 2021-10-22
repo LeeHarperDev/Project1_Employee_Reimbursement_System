@@ -1,0 +1,212 @@
+* {
+    --main-color: #8C2F39;
+    --secondary-color: #FCB9B2;
+    --main-color-text: white;
+    --secondary-color-text: white;
+
+    --success-color: #8CBA80;
+    --failure-color: #B23A48;
+    --pending-color: gray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background: var(--main-color);
+    min-height: 5rem;
+    border-bottom: var(--secondary-color) 2px solid;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+nav ul li {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1.5rem;
+}
+
+nav ul li a, a:active {
+    color: var(--main-color-text);
+    text-decoration: none;
+}
+
+main {
+    padding: 2.5rem;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+.employee_card {
+    text-align: center;
+    padding: 2.5rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+
+.employee_card img {
+    width: 256px;
+    padding: 10px;
+}
+
+#employeeList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#employeeInfoBox {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#employeeInfoBox div:first-child {
+    text-align: center;
+}
+
+#employeeInfoBox div:last-child h2 {
+    font-size: 250%;
+    margin-top: 2.5rem;
+}
+
+#ticketList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.ticket_card {
+    min-height: 5rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.pending, .approved, .rejected {
+    border-radius: 0.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: white;
+    border: 2px solid black;
+}
+
+.pending {    
+    background: var(--pending-color);
+}
+
+.approved {    
+    background: var(--success-color);
+}
+
+.rejected {    
+    background: var(--failure-color);
+}
+
+#modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(209, 209, 209, 0.8);
+    padding: 10rem;
+
+    transition: all 2s;
+}
+
+#modalContent {
+    background: white;
+    height: 100%;
+    border-radius: 25px;
+    padding: 1.5rem;
+}
+
+#modalContent h2 {    
+    text-align: center;
+}
+
+#determinationForm {    
+    width: 50%;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 1.5rem 0;
+}
+
+#closeModalButton {
+    cursor: pointer;
+    background: var(--main-color);
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 0.5rem;
+    float: right;
+}
+
+.determination_btn {
+    cursor: pointer;
+    background: darkgray;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: inline-block;
+    margin: 0.5rem;
+    color: white;
+    border: 2px solid black;
+}
+
+.anchorBtn {
+    cursor: pointer;
+    background: gray;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: inline-block;
+    margin: 0.5rem;
+    color: white;
+    border: 2px solid black;
+}
+
+.anchorBtn, .anchorBtn:active {
+    text-decoration: none;
+}
+
+.actionGroup {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+hr {
+    border-color: var(--secondary-color);
+}
+
+form {
+    width: 50%;
+}
+
+button {
+    cursor: pointer;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: inline-block;
+    margin: 0.5rem;
+    color: var(--main-color-text);
+    border: 2px solid black;
+}
+
+input, textarea, fieldset {
+    padding: 0.15rem;
+}

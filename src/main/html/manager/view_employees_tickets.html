@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employees Tickets | Employee Reimbursement Application</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/manageSingleEmployeesTickets.js" type="module" defer></script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>
+            <a href="/dashboard">Dashboard</a>
+        </li>
+        <li>
+            <a href="/admin/employees">Employees</a>
+        </li>
+        <li>
+            <a href="/admin/employees/add">Register Employee</a>
+        </li>
+        <li>
+            <a href="/admin/tickets">Tickets</a>
+        </li>
+        <li>
+            <a href="/api/logout">Logout</a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <h1>All Submitted Reimbursement Tickets</h1>
+    <hr>
+    <label for="searchByDetermination">
+        Ticket Filter:
+        <select id="searchByDetermination" name="searchByDetermination">
+
+        </select>
+    </label>
+    <button class="openModalBtn">
+        Submit Ticket
+    </button>
+    <div id="ticketList">
+            <span>
+                Loading...
+            </span>
+    </div>
+</main>
+<div id="modal">
+    <div id="modalContent">
+        <button id="closeModalButton">X</button>
+        <h2>Create Reimbursement Ticket</h2>
+        <form id="reimbursementForm">
+            <label for="subject">
+                Subject:
+                <input type="text" name="subject" id="subject">
+            </label>
+            <label for="description">
+                Description:
+                <textarea name="description" id="description" rows="10" cols="60"></textarea>
+            </label>
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

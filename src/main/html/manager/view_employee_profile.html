@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <title>Employee Profile | Employee Reimbursement Application</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/managerViewEmployeeProfile.js" type="module" defer></script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li>
+            <a href="/dashboard">Dashboard</a>
+        </li>
+        <li>
+            <a href="/admin/employees">Employees</a>
+        </li>
+        <li>
+            <a href="/admin/employees/add">Register Employee</a>
+        </li>
+        <li>
+            <a href="/admin/tickets">Tickets</a>
+        </li>
+        <li>
+            <a href="/api/logout">Logout</a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <div id="employeeInfoBox">
+        <div>
+            <img src="/images/employees/employee_placeholder.png">
+            <h2 id="employeeFullName"></h2>
+            <a id="employeeTicketsButton" class="anchorBtn">View Reimbursement Tickets</a>
+        </div>
+        <div>
+            <h2>Personal Information</h2>
+            <hr>
+            <p>First Name: <span id="employeeFirstName"></span></p>
+            <p>Last Name: <span id="employeeLastName"></span></p>
+            <p>Gender: <span id="employeeGender"></span></p>
+            <p>Employee ID: <span id="employeeId"></span></p>
+
+            <h2>Address Information</h2>
+            <hr>
+            <p>Address Line 1: <span id="employeeAddressFirstLine"></span></p>
+            <p>Address Line 2: <span id="employeeAddressSecondLine"></span></span></p>
+            <p>City: <span id="employeeAddressCity"></span></p>
+            <p>State: <span id="employeeAddressState"></span></p>
+            <p>ZIP: <span id="employeeAddressZip"></span></p>
+        </div>
+    </div>
+</main>
+</body>
+</html>

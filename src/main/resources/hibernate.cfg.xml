@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- datasource -->
+        <property name="hibernate.connection.url">jdbc:postgresql://javafs-210907-rds.cd8dnm0s2nue.us-east-2.rds.amazonaws.com:5432/postgres</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">.ColonyWars.</property>
+
+        <!-- driver specs -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+
+        <!-- make things pretty -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+
+
+        <mapping class="com.ex.model.Address"/>
+        <mapping class="com.ex.model.Employee"/>
+        <mapping class="com.ex.model.User"/>
+        <mapping class="com.ex.model.Role"/>
+        <mapping class="com.ex.model.Ticket"/>
+        <mapping class="com.ex.model.TicketDetermination"/>
+        <mapping class="com.ex.model.DeterminationType"/>
+    </session-factory>
+</hibernate-configuration>
