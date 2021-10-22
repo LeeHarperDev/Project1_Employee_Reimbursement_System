@@ -7,6 +7,7 @@ This is an Employee Reimbursement System. Using this system, an employee will be
 ## Technologies Used
 
 * Java - Version 15
+* Maven
 * Hibernate - Version 4.3.11
 * JUnit - Version 4.11
 * AssertJ - Version 3.21
