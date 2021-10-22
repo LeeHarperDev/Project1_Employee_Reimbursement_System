@@ -79,3 +79,4 @@ insert into "role" values (1, 'Employee'), (2, 'Manager');
 insert into determination_type values (-1, 'ALL'), (0, 'PENDING'), (1, 'REJECTED'), (2, 'APPROVED');
 insert into address values (1, 'lineOne', 'lineTwo', 'city', 'ST', 'zip');
 insert into employee values (1, 'Administrator', 'Admin', 'N/A', 1);
+insert into users values (1, 1, 2, 'admin', '$2a$10$JzJkwNQS01VvedCPJRqOQunI8m9gSxSv05K.v5i4xyQkoj6FL47KC');
