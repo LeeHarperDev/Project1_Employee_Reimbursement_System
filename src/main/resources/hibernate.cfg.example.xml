@@ -5,9 +5,9 @@
 <hibernate-configuration>
     <session-factory>
         <!-- datasource -->
-        <property name="hibernate.connection.url">jdbc:postgresql://javafs-210907-rds.cd8dnm0s2nue.us-east-2.rds.amazonaws.com:5432/postgres</property>
-        <property name="hibernate.connection.username">postgres</property>
-        <property name="hibernate.connection.password">.ColonyWars.</property>
+        <property name="hibernate.connection.url">db_url</property>
+        <property name="hibernate.connection.username">username</property>
+        <property name="hibernate.connection.password">password</property>
 
         <!-- driver specs -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
