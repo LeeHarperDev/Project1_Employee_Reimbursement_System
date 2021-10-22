@@ -1,5 +1,12 @@
 package com.ex.controller;
 
+import com.ex.model.Address;
+import com.ex.model.Employee;
+import com.ex.model.Role;
+import com.ex.model.dao.DataAccessible;
+import com.ex.model.dao.EmployeeDAO;
+import com.ex.model.dao.UserDAO;
+import com.ex.services.PasswordHash;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ex.controller.api.*;
 import com.ex.controller.auth.AuthenticationController;
@@ -31,8 +38,24 @@ public class Application {
         }
     }
 
+    public void registerAdminIfNotExists() {
+        DataAccessible<User, Integer> userStorage = new UserDAO(this.sessionFactory);
+        DataAccessible<Employee, Integer> employeeStorage = new EmployeeDAO(this.sessionFactory);
+        User user = userStorage.retrieveOne(1);
+
+        if (user == null) {
+            Employee employee = employeeStorage.retrieveOne(1);
+            Role role = new Role(2, "MANAGER");
+            user = new User(1, employee, role, "admin", "admin");
+
+            userStorage.create(user);
+        }
+    }
+
     public void run(Configuration configuration) {
         this.configure(configuration);
+        logger.info("Creating admin user if none exists.");
+        this.registerAdminIfNotExists();
         logger.info("Initiating Javalin web server.");
         this.app = Javalin.create(config -> config.addStaticFiles("/public", Location.CLASSPATH)).start(8080);
 

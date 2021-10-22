@@ -39,8 +39,8 @@ public class UserDAO implements DataAccessible<User, Integer> {
 
         // Hashes the password for the user.
         user.setPassword(PasswordHash.hashPassword(user.getPassword()));
-        session.save(user.getEmployee().getAddress());
-        session.save(user.getEmployee());
+        session.saveOrUpdate(user.getEmployee().getAddress());
+        session.saveOrUpdate(user.getEmployee());
         session.save(user);
 
         logger.info("Committing transaction.");
